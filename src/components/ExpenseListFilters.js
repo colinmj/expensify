@@ -25,6 +25,7 @@ class ExpenseListFilters extends React.Component {
       calendarFocused
     });
   };
+
   render() {
     return (
       <div>
