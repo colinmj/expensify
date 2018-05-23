@@ -3,10 +3,6 @@ const path = require('path');
 const app = express();
 const publicPath = path.join(__dirname, '..', 'public');
 const port = process.env.PORT || 3000;
-const dotenv = require('dotenv');
-
-dotenv.config();
-dotenv.load();
 
 console.log(process.env);
 
