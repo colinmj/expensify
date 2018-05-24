@@ -80,3 +80,14 @@ export const removeElExpensesMuchacho = ({ id }) => {
       });
   };
 };
+
+export const editElExpenses = (id, updates) => {
+  return dispatch => {
+    return db
+      .ref(`expenses/${id}`)
+      .update(updates)
+      .then(() => {
+        dispatch(editExpense(id, updates));
+      });
+  };
+};
