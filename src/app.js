@@ -20,6 +20,7 @@ const jsx = (
 let hasRendered = false;
 
 const renderApp = () => {
+  console.log(firebase.auth());
   if (!hasRendered) {
     ReactDOM.render(jsx, document.getElementById('app'));
     hasRendered = true;
