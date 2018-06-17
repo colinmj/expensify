@@ -5,11 +5,12 @@ import { startAddExpense } from '../redux/modules/expenses';
 
 class AddExpensePage extends React.Component {
   onSubmit = expense => {
+    console.log(expense);
     this.props.startAddExpense(expense);
     this.props.history.push('/');
   };
   render() {
-    console.log(process.env);
+   
     return (
       <div>
         <ExpenseForm onSubmit={this.onSubmit} />
