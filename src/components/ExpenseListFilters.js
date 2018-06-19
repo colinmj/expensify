@@ -32,6 +32,7 @@ class ExpenseListFilters extends React.Component {
         <div className="input-group">
           <div className="input-group__item">
             <input
+              className="text-input"
               type="text"
               value={this.props.filters.text}
               onChange={e => {
@@ -41,6 +42,7 @@ class ExpenseListFilters extends React.Component {
           </div>
           <div className="input-group__item">
             <select
+              className="select"
               value={this.props.filters.sortBy}
               onChange={e => {
                 console.log(e.target.value);

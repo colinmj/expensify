@@ -11,13 +11,15 @@ const EditExpensePage = props => {
   console.log(props);
   return (
     <div>
-      <ExpenseForm
-        expense={props.expense}
-        onSubmit={expense => {
-          props.dispatch(editElExpenses(props.expense.id, expense));
-          props.history.push('/');
-        }}
-      />
+      <div className="content-container">
+        <ExpenseForm
+          expense={props.expense}
+          onSubmit={expense => {
+            props.dispatch(editElExpenses(props.expense.id, expense));
+            props.history.push('/');
+          }}
+        />
+      </div>
 
       <button
         onClick={() => {
